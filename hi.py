@@ -16,5 +16,5 @@ days_of_year = 365 * years_remaining
 weeks_of_year = 52 * years_remaining
 months_of_year = 12 * years_remaining
 
-print(f"You have {days_of_year} days, {weeks_of_year}, and {months_of_year} months left")
+print(f"You have {days_of_year} days, {weeks_of_year} weeks, and {months_of_year} months left")
 
