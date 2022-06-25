@@ -24,6 +24,22 @@ print(number_of_student)
 
 print(round(sum_heigts/number_of_student))
 
+print("------------------------------------------------")
+student_scores = input("Input a list of student scores ").split()
+for n in range(0, len(student_scores)):
+  student_scores[n] = int(student_scores[n])
+print(student_scores)
 
+# sorted_scores = sorted(student_scores)
+#
+# print(f"The highest score in the class is: {sorted_scores[-1]}")
+
+# or
+
+highest_score = 0
+for score in student_heights:
+  if score > highest_score:
+    highest_score = score
+print(f"The highest score in the class is: {highest_score}")
 
 
