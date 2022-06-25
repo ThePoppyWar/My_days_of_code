@@ -37,7 +37,7 @@ print(student_scores)
 # or
 
 highest_score = 0
-for score in student_heights:
+for score in student_scores:
   if score > highest_score:
     highest_score = score
 print(f"The highest score in the class is: {highest_score}")
