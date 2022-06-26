@@ -11,16 +11,16 @@ def wisielec(word: str):
 
     game_over = False
 
-    result = []
+    if "_" not in display:
+        game_over = True
+        print("You win!")
+
     while not game_over:
         litera = input("Podaj literę: ").upper()
         for index in range(long_word):
             letter = word[index]
             if letter == litera:
                 display[index] = letter
-
-        return result
-
-
+        return display
 
 print(wisielec("Kawa"))
