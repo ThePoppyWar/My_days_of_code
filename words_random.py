@@ -11,15 +11,20 @@ word_length = len(chosen_word)
 for _ in range(word_length):
     display += "_"
 
-guess = input("Guess a letter: ").lower()
+game_over = False
+while not game_over:
+    guess = input("Guess a letter: ").lower()
 
-for position in range(word_length):
-    letter = chosen_word[position]
-    # print(f"Current position: {position}\n Current letter: {letter}\n Guessed letter: {guess}")
-    if letter == guess:
-        display[position] = letter
+    for position in range(word_length):
+        letter = chosen_word[position]
+        # print(f"Current position: {position}\n Current letter: {letter}\n Guessed letter: {guess}")
+        if letter == guess:
+            display[position] = letter
+    print(display)
 
-print(display)
+    if "_" not in display:
+        game_over = True
+        print("You win!")
 
 # display_letter = []
 # sum_letter = 0

@@ -9,13 +9,18 @@ def wisielec(word: str):
     for _ in range(long_word):
         display.append("_")
 
-    for index in range(long_word):
-        letter = word[index]
-        if letter == litera:
-            display[index] = letter
-    return display
+    game_over = False
+
+    result = []
+    while not game_over:
+        litera = input("Podaj literę: ").upper()
+        for index in range(long_word):
+            letter = word[index]
+            if letter == litera:
+                display[index] = letter
+
+        return result
 
 
 
-litera = input("Podaj literę: ").upper()
 print(wisielec("Kawa"))
