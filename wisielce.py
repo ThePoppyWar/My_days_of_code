@@ -1,23 +1,21 @@
 
 
 
-def wisielec(sentenc: str):
+def wisielec(word: str):
 
-    sentenc = sentenc.split()
-    sentenc_liter = ["_"] * len(sentenc)
-    zgadywanie = input("Podaj literę: ").upper()
+    word = word.upper()
+    long_word = len(word)
+    display = []
+    for _ in range(long_word):
+        display.append("_")
 
-    if zgadywanie in sentenc:
-        litera = []
-        for i in range(len(sentenc)):
-            if sentenc[i] == zgadywanie:
-                litera.append(i)
+    for index in range(long_word):
+        letter = word[index]
+        if letter == litera:
+            display[index] = letter
+    return display
 
-        for index in litera:
-            zgadywanie[index] = sentenc[index]
 
-        return zgadywanie
-    else:
-        print("Incorrect")
 
+litera = input("Podaj literę: ").upper()
 print(wisielec("Kawa"))
