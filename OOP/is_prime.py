@@ -10,6 +10,18 @@ def is_prime(n):
         i += 2
     return True
 
+def position_prime():
+    counter = 0
+    number = 2
+    while True:
+        if is_prime(number):
+            counter += 1
+            if counter == 100:
+                return number
+        number += 1
+
+print(position_prime())
+
 
 def is_prime_2(n):
     if n < 2:
@@ -21,5 +33,5 @@ def is_prime_2(n):
             return False
     return True
 
-print(is_prime(11))
+print(is_prime(100))
 print(is_prime(6))
