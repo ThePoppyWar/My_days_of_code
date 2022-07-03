@@ -11,6 +11,10 @@ def calculate():
         result = first_number - next_number
     else:
         result = first_number * next_number
-    return input(f"Type 'y' to continue calculating with {result}, or type 'n' to start a new calculation: ")
+    result_2 = input(f"Type 'y' to continue calculating with {result}, or type 'n' to start a new calculation: ")
+    if result_2 == "no":
+    return
+
 
 calculate()
+
