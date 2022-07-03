@@ -3,6 +3,5 @@
 A simple project in python language.
 
 Technologies:
-
     Python
     
