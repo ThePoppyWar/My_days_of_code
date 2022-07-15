@@ -8,8 +8,6 @@ maker_coffee = CoffeeMaker()
 menu = Menu()
 
 
-maker_coffee.report()
-money.report()
 
 while is_on:
     options = menu.get_items()
@@ -21,6 +19,9 @@ while is_on:
         money.report()
     else:
         order = menu.find_drink(choice)
-        print(order)
+        if maker_coffee.is_resource_sufficient(order) and money.make_payment(order.cost):
+            maker_coffee.make_coffee(order)
+
+
 
 
