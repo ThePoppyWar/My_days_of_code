@@ -1,13 +1,11 @@
 class QuizBrain:
     def __init__(self, question_list):
         self.question_number = 0
+        self.score = 0
         self.question_list = question_list
 
     def still_has_questions(self):
-        if self.question_number < len(self.question_list):
-            return True
-        else:
-            False
+        return self.question_number < len(self.question_list)
 
     def next_question(self):
         current_question = self.question_list[self.question_number]
@@ -23,5 +21,4 @@ class QuizBrain:
             print("That's wrong.")
         print(f"The correct answer was: {correct_answer}")
         print(f"Your current score is: {self.score} / {self.question_number}")
-
-
+        print("\n")
