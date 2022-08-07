@@ -27,6 +27,7 @@ while game_is_on:
         new_x = segments[seg_num - 1].xcor()
         new_y = segments[seg_num - 1].ycor()
         segments[seg_num].goto(new_x, new_y)
-
+    segments[0].forward(20)
+    segments[0].left(10)
 
 screen.exitonclick()
