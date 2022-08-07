@@ -22,9 +22,17 @@ def move_left():
     tim.setheading(new_heading)
 
 
+def clear():
+    tim.clear()
+    tim.penup()
+    tim.home()
+    tim.pendown()
+
+
 screen.listen()
 screen.onkey(move_forwards, 'w')
 screen.onkey(move_backwards, 's')
 screen.onkey(move_right, 'a')
 screen.onkey(move_left, 'd')
+screen.onkey(clear, 'c')
 screen.exitonclick()
