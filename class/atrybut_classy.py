@@ -7,3 +7,6 @@ class Phone:
 print(getattr(Phone, 'color'))
 
 
+for attr in sorted(Phone.__dict__.keys()):
+    if not attr.startswith('_'):
+        print(f'{attr} -> {getattr(Phone, attr)}')
