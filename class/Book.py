@@ -105,3 +105,23 @@ Book3.show_details()
 
 book_3 = Book3()
 book_3.show_details('Tomm Snake', 190)
+
+print("------------------------------------------------------Book 4--------------------------------")
+
+class Book4:
+
+    language = 'ENG'
+    author = 'Hermest'
+
+    def set_title(instance, value):
+        instance.title = value
+
+book4 = Book4()
+book4.set_title("Pan Tadeusz")
+
+print(book4.__dict__)
+print(book4.title)
+
+Book4.set_title(book4, "Konrad")
+print(book4.__dict__)
+print(book4.title)
