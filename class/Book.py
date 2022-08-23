@@ -58,3 +58,14 @@ for book, value in zip(books, titles):
 for book in books:
     print(f"jezyk: {book.language}, author: {book.author}, tytuł: {book.title}")
 
+print("------------------------------------------------------Book titles 2--------------------------------")
+titles = ["Sonety krumskie1", 'Pan Tadeusz2', 'Konrad Wallenrod3']
+
+
+for book, value in zip(books, titles):
+    setattr(book, 'title', value)
+
+for book in books:
+    print(book.__dict__)
+
+
