@@ -3,6 +3,10 @@ class Phone:
     year = 2022;
     color = 'red';
 
+    def describe_class():
+        print(f'Operating system: {Phone.os}')
+        print(f'{Phone.__name__} class.')
+
 
 # print(getattr(Phone, 'color'))
 
@@ -12,6 +16,16 @@ class Phone:
 #         print(f'{attr} -> {getattr(Phone, attr)}')
 
 
-print(setattr(Phone, 'color', 'blue'))
+# print(setattr(Phone, 'color', 'blue'))
 
-print(Phone.__dict__)
+
+# Phone.orginal_country = 'USA'
+# print(Phone.__dict__)
+
+# setattr(Phone, 'year_of_production', 2000)
+# print(Phone.__dict__)
+print('----------------------------------------------------------------')
+
+Phone.describe_class()
+print('----------------------------------------------------------------')
+getattr(Phone, 'describe_class')()
