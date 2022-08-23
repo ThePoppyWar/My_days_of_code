@@ -29,3 +29,5 @@ print("-------------------------------------------------------------------------
 foto = Foto()
 print(foto.execution_time)
 print(Foto.currtery_time())
+
+print(Foto.__mro__)
