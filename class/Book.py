@@ -113,8 +113,8 @@ class Book4:
     language = 'ENG'
     author = 'Hermest'
 
-    def set_title(instance, value):
-        instance.title = value
+    def set_title(self, value):
+        self.title = value
 
 book4 = Book4()
 book4.set_title("Pan Tadeusz")
@@ -125,3 +125,11 @@ print(book4.title)
 Book4.set_title(book4, "Konrad")
 print(book4.__dict__)
 print(book4.title)
+
+print("------------------------------------------------------Book 4 part 2--------------------------------")
+
+Book4.get_title = lambda self: self.title
+
+book_4 = Book4()
+book_4.set_title("Pan Tadeusz")
+print(book_4.get_title())

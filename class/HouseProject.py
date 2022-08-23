@@ -31,3 +31,21 @@ print(foto.execution_time)
 print(Foto.currtery_time())
 
 print(Foto.__mro__)
+
+print("-------------------------------------House Project-----------------------------------------------")
+
+class HouseProject2:
+    number_of_floors = 2
+    area = 100
+
+    def describe_project():
+        print(f"Area: {HouseProject.area} m2.")  
+        print(f"Number of floats: {HouseProject.number_of_floors}")
+
+    def set_color(self, color):
+        self.color = color
+
+
+house1 = HouseProject2()
+house1.set_color("Black")
+print(house1.color)
