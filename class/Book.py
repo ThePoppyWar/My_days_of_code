@@ -69,3 +69,39 @@ for book in books:
     print(book.__dict__)
 
 
+print("------------------------------------------------------Book 2--------------------------------")
+
+
+class Book2:
+
+    language = 'PL'
+    author = 'Słowacki'
+
+    def show_details():
+        print(f'Author: {Book2.author}\nJęzyk: {Book2.language}')
+
+Book2.show_details()
+
+Book2.show_language = lambda: print(f"Jezyk: {Book2.language}")
+
+Book2.show_language()
+
+book_1 = Book2()
+
+print("------------------------------------------------------Book 3--------------------------------")
+
+class Book3:
+
+    language = 'Niem'
+    author = 'Hesse'
+
+    def show_details(*args):
+        print(args)
+        for arg in args:
+            print(f'{arg} -> {type(arg)}')
+
+
+Book3.show_details()
+
+book_3 = Book3()
+book_3.show_details('Tomm Snake', 190)
