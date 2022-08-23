@@ -49,3 +49,6 @@ class HouseProject2:
 house1 = HouseProject2()
 house1.set_color("Black")
 print(house1.color)
+
+HouseProject2.set_color(house1, "white")
+print(house1.color)
