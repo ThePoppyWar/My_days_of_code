@@ -29,3 +29,19 @@ print('----------------------------------------------------------------')
 Phone.describe_class()
 print('----------------------------------------------------------------')
 getattr(Phone, 'describe_class')()
+print('------------------------Phone 1------------------------------')
+
+class Phone1:
+
+    def __init__(self, brand):
+        self.brand = brand
+
+
+    def print_brand(self):
+        print(f"{self.__class__.__name__} class")
+        print(f'Brand: {self.brand}')
+
+phone1 = Phone1('Apple')
+phone1.print_brand()
+
+
