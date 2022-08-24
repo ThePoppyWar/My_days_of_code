@@ -33,15 +33,28 @@ print('------------------------Phone 1------------------------------')
 
 class Phone1:
 
+    brand = "Apple"
+
     def __init__(self, brand):
         self.brand = brand
 
 
     def print_brand(self):
-        print(f"{self.__class__.__name__} class")
-        print(f'Brand: {self.brand}')
+        print(f"{Phone1.brand} klasa")
+        print(f'Instancja {self.brand}')
 
-phone1 = Phone1('Apple')
+phone1 = Phone1('Samsung')
 phone1.print_brand()
 
+print('------------------------Phone 2------------------------------')
 
+brand2 = "HP"
+
+class Phone2:
+
+    brand = "Apple"
+    result1 = [brand] * 5
+    result2 = [brand for brand in range(5)]
+
+
+print(Phone2.__dict__)
